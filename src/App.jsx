@@ -1,11 +1,17 @@
+import equilibrium from './images/image-equilibrium.jpg';
+import view from './images/icon-view.svg';
+import ethereum from './images/icon-ethereum.svg';
+import clock from './images/icon-clock.svg';
+import avatar from './images/image-avatar.png';
+
 function App() {
     return (
         <main className="p-[1.5rem] flex flex-col justify-center items-center min-h-[100dvh]">
             <div className="bg-cardBg p-[1.5rem] rounded-[.9rem] w-full max-w-[21.5rem]">
                 <div className="relative cursor-pointer">
-                    <img src="/images/image-equilibrium.jpg" alt="equilibrium NFT" className="rounded-[.5rem]" />
+                    <img src={equilibrium} alt="equilibrium NFT" className="rounded-[.5rem]" />
                     <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-cyan bg-opacity-50 rounded-[.5rem] opacity-0 transition-opacity duration-300 hover:opacity-100">
-                        <img src="/images/icon-view.svg" alt="eye icon" />
+                        <img src={view} alt="eye icon" />
                     </div>
                 </div>
                 <div className="flex flex-col gap-y-[1rem]">
@@ -13,20 +19,16 @@ function App() {
                     <p className="text-gray font-light">Our Equilibrium collection promotes balance and calm.</p>
                     <div className="flex justify-between items-center">
                         <span className="flex text-cyan font-medium">
-                            <img src="/images/icon-ethereum.svg" alt="ethereum icon" className="mr-[.4rem]" /> 0.041 ETH
+                            <img src={ethereum} alt="ethereum icon" className="mr-[.4rem]" /> 0.041 ETH
                         </span>
                         <span className="flex text-gray font-light">
-                            <img src="/images/icon-clock.svg" alt="clock icon" className="mr-[.4rem]" /> 3 days left
+                            <img src={clock} alt="clock icon" className="mr-[.4rem]" /> 3 days left
                         </span>
                     </div>
                 </div>
                 <div className="w-full h-[.065rem] bg-line my-[.9rem]"></div>
                 <div className="flex mt-[.2rem] items-center">
-                    <img
-                        src="/images/image-avatar.png"
-                        alt="creator avatar"
-                        className="w-[2rem] border-white border-[.065rem] rounded-full mr-[1rem]"
-                    />
+                    <img src={avatar} alt="creator avatar" className="w-[2rem] border-white border-[.065rem] rounded-full mr-[1rem]" />
                     <p className="text-gray font-light">
                         Creation of <span className="text-white hoverable">Jules Wyvern</span>
                     </p>
