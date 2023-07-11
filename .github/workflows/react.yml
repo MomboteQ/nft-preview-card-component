@@ -32,11 +32,9 @@ jobs:
             - name: Update asset paths
               run: |
                   sed -i 's/\/assets\//\/nft-preview-card-component\/assets\//g' dist/index.html
+                  sed -i 's/\/images\//\/nft-preview-card-component\/images\//g' dist/index.html
                   sed -i 's/\/assets\//\/nft-preview-card-component\/assets\//g' dist/assets/*.js
-                  sed -i 's/\/assets\//\/nft-preview-card-component\/assets\//g' dist/assets/*.css
-                  sed -i 's/\/images\//\/nft-preview-card-component\/images\//g' dist/images/*.png
-                  sed -i 's/\/images\//\/nft-preview-card-component\/images\//g' dist/images/*.jpg
-                  sed -i 's/\/images\//\/nft-preview-card-component\/images\//g' dist/images/*.svg
+                  sed -i 's/\/images\//\/nft-preview-card-component\/images\//g' dist/assets/*.js
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v1
               with:
