@@ -31,9 +31,9 @@ jobs:
               run: npm run build
             - name: Update asset paths
               run: |
-                  sed -i 's/\/assets\//\/repo\/assets\//g' build/index.html
-                  sed -i 's/\/assets\//\/repo\/assets\//g' build/static/js/*.js
-                  sed -i 's/\/assets\//\/repo\/assets\//g' build/static/css/*.css
+                  sed -i 's/\/assets\//\/repo\/assets\//g' dist/index.html
+                  sed -i 's/\/assets\//\/repo\/assets\//g' dist/static/js/*.js
+                  sed -i 's/\/assets\//\/repo\/assets\//g' dist/static/css/*.css
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v1
               with:
