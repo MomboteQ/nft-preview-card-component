@@ -32,9 +32,8 @@ jobs:
             - name: Update asset paths
               run: |
                   sed -i 's/\/assets\//\/nft-preview-card-component\/assets\//g' dist/index.html
-                  sed -i 's/\/images\//\/nft-preview-card-component\/images\//g' build/index.html
-                  sed -i 's/\/assets\//\/nft-preview-card-component\/assets\//g' dist/assets/*.js
-                  sed -i 's/\/images\//\/nft-preview-card-component\/images\//g' dist/assets/*.js
+                  sed -i 's/\/images\//\/nft-preview-card-component\/images\//g' dist/index.html
+                  find dist/assets -name '*.js' -type f -exec sed -i 's/\/images\//\/nft-preview-card-component\/images\//g' {} +
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v1
               with:
