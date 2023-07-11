@@ -1,5 +1,5 @@
 function App() {
-    const url = process.env.PUBLIC_URL;
+    const url = process.env.REACT_APP_PUBLIC_URL;
 
     return (
         <main className="p-[1.5rem] flex flex-col justify-center items-center min-h-[100dvh]">
